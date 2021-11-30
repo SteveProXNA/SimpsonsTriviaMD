@@ -40,6 +40,7 @@ void screen_intro_screen_load()
 void screen_intro_screen_update( unsigned char *screen_type )
 {
 	unsigned char input = 0;
+	unsigned char input2 = 0;
 	screen_bases_screen_timer++;
 	if( screen_bases_screen_timer >= screen_intro_screen_delay )
 	{
@@ -59,7 +60,8 @@ void screen_intro_screen_update( unsigned char *screen_type )
 	}
 
 	input = engine_input_manager_hold_fire1();
-	if( input )
+	input2 = engine_input_manager_hold_buttonStart();
+	if( input || input2 )
 	{
 		engine_audio_manager_play_effect( effect_type_right );
 		*screen_type = screen_type_diff;

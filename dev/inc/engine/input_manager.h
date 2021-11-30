@@ -11,6 +11,7 @@ unsigned char engine_input_manager_hold_left();
 unsigned char engine_input_manager_hold_right();
 unsigned char engine_input_manager_hold_fire1();
 unsigned char engine_input_manager_hold_fire2();
+unsigned char engine_input_manager_hold_buttonStart();
 
 // Public methods MOVE.
 unsigned char engine_input_manager_move_up();
